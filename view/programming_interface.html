@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!--    <script src="../project/memory.js"> </script>-->
+    <title>CPU</title>
+    <link rel="stylesheet" href="../css/programming_interface.css">
+</head>
+<body onload="" style="">
+<div class="flex-container">
+
+    <div class="flex-container">
+        <div id="instruction" class="child ">
+            <label for="instruction-input">INSTRUCTIONS</label>
+            <textarea id="instruction-input" name="instruction-input" rows="15" cols="30"></textarea>
+            <button class="button" type="submit" onclick="instructionConversion()"> generate opcode</button>
+        </div>
+        <div class="child">
+            <label for="instruction-input">OPCODE</label>
+            <textarea id="opcode-output" name="instruction-input" rows="15" cols="30"></textarea>
+            <button class="button" onclick="save()" type="submit"> save</button>
+        </div>
+    </div>
+
+    <div id="memory" class="child">
+        <div align="center">
+            <table id='table-table' class="table"></table>
+        </div>
+        <button onclick="clearMemory();" class="button">clear it</button>
+    </div>
+
+</div>
+
+<div id="" class="cpu-panelpc">
+    <div>
+        <label id="label-mbr"> MBR </label>
+        <input type="text" value="0" id="mbr">
+        <label id="label-mar"> MAR </label>
+        <input type="text" value="0" id="mar">
+        <label id="label-ir"> IR </label>
+        <input type="text" value="0" id="ir">
+        <label id="label-ro0"> RO0 </label>
+        <input type="text" value="0" id="ro0">
+        <label id="label-E"> E </label>
+        <input type="text" value="0" id="e">
+    </div>
+    <div>
+        <label id="label-ro1"> RO1 </label>
+        <input type="text" value="0" id="ro1">
+        <label id="label-ro2"> RO2 </label>
+        <input type="text" value="0" id="ro2">
+        <label id="label-imm"> IMM </label>
+        <input type="text" value="0" id="imm">
+        <label id="label-pc"> PC </label>
+        <input type="text" value="0" id="pc">
+        <label id="label-L"> L </label>
+        <input type="text" value="0" id="l">
+    </div>                                                 
+    <div>                                                  
+        <label id="label-r0"> R0 </label>                  
+        <input type="text" value="0" id="r0">              
+        <label id="label-r1"> R1</label>                   
+        <input type="text" value="0" id="r1">              
+        <label id="label-r2"> R2 </label>                  
+        <input type="text" value="0" id="r2">              
+        <label id="label-r3"> R3 </label>                  
+        <input type="text" value="0" id="r3">
+        <label id="label-G"> G </label>
+        <input type="text" value="0" id="g">
+    </div>
+    <div>
+        <button id="next-instruction-button" onclick="machineCicle();" class="button"> next instruction </button>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+<script src="../project/machineInstructions.js"></script>
+<script src="../project/utilities.js"></script>
+<script src="../project/instructionConversion.js"></script>
+<script src="../project/memory.js"></script>
+<script src="../project/main.js"></script>

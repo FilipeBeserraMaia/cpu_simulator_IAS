@@ -1,0 +1,47 @@
+professor , todas as instruçoes foram testadas , o "software" foi testado usando no navegador firefox , por conta do erro que eu te mandei em email do JavaScript colocar um numero em Hexa negativo tive que fazer diversos casting para BigInt , não sei quais efeitos colaterais isso pode desencadear , o codigo abaixo foi testado e todas as 24 instruçoes foram testadas após as mudanças .
+ACESSE A PASTA VIEW PARA TER ACESSO AO PROJETO . 
+------------------------------------------------------------
+
+ld r0, E
+ld r1, F
+sub r0, r0, r1
+ld r1, D
+div r1, r1, r0
+ld r2, C
+mul r2, r2, r1
+ld r1, B
+add r1, r1, r2
+st r1, A
+hlt
+-------------------------------------------------------------
+----------------------------------------------------------
+- considere que A EQUAÇÃO  A = B +C * D/(E-F)            -
+- B = 7 C = 3 D = 8  E = 4 F = 2                         -
+-                                                        -
+- A = 7+3*(8/(4-2))                                      -
+-						       -
+-resposta deve ser A =  13			       -
+----------------------------------------------------------
+-------------------------------------------------------------
+ld r0, 1E
+ld r1, 1F
+sub r0, r0, r1
+ld r1, 1D
+div r1, r1, r0
+ld r2, 1C
+mul r2, r2, r1
+ld r1, 1B
+add r1, r1, r2
+st r1, 1a
+cmp r1, r0
+jge 59
+movih r1, 63
+hlt
+
+-------------------------------------------------------
+ld r1 20
+movrr r2, r1
+st r2 21
+jmp 60
+hlt
+-------------------------------------------------------
