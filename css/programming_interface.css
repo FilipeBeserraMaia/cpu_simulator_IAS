@@ -54,12 +54,11 @@ textarea {
     margin-left: auto;
     margin-right: auto;
 }
-
 input {
     background: black;
     border: 1px solid darkslategray;
     color: whitesmoke;
-    width: 70px;
+    width: 100px;
 }
 
 .button {

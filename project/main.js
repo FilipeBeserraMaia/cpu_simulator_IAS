@@ -15,10 +15,6 @@ function instructionConversion() {
 
 function save() {
     saveOpcode();
-    // console.log('--------memoria----------')
-    // console.log(memory)
-    // console.log('--------memoria----------')
-
 }
 
 function machineCicle() {
@@ -41,13 +37,13 @@ function decodefy(opcode) {
     var ro2 = ''
     var imm = ''
     var memMask = ''
-    //alert(opcode)
+
     ir = Math.abs(Number((BigInt(opcode) & 0xF8000000n) >> 27n))
     ro0 = Math.abs(Number((BigInt(opcode) & 0x6000000n) >> 25n))
     ro1 = Math.abs(Number((BigInt(opcode) & 0x1800000n) >> 23n))
     ro2 = Math.abs(Number((BigInt(opcode) & 0x600000n) >> 21n))
 
-     alert(ir)
+
     var mapKey = getMapKey(instructionSet, ir);
 
     if (mapKey in maskFirstCase)

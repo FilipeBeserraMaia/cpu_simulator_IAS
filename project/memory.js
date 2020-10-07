@@ -1,7 +1,7 @@
 function saveOpcode() {
     for (var id in opcodeList) {
         var element = document.getElementById((memNumber[id]).toString())
-        element.value = '0x' + parseInt(opcodeList[id]).toString(16).toUpperCase();
+        element.value = '' + parseInt(opcodeList[id]).toString(16).toUpperCase();
         memory[id]= parseInt((element.value),16)
     }
 }
@@ -15,9 +15,9 @@ function saveInMemory(element){
 function clearMemory() {
     for (var i = 0; i < 100; i++) {
         var element = document.getElementById((memNumber[i].toString()));
-        element.value = '0x00000000';
+        element.value = '00000000';
+        opcodeList[i] = 0;
     }
-    opcodeList = [];
     memory = opcodeList;
     opcodeOutPut.value = ''
 }
