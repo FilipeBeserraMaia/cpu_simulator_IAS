@@ -1,6 +1,4 @@
-professor , todas as instruçoes foram testadas , o "software" foi testado usando no navegador firefox , por conta do erro que eu te mandei em email do JavaScript colocar um numero em Hexa negativo tive que fazer diversos casting para BigInt , não sei quais efeitos colaterais isso pode desencadear , o codigo abaixo foi testado e todas as 24 instruçoes foram testadas após as mudanças .
-ACESSE A PASTA VIEW PARA TER ACESSO AO PROJETO . 
-------------------------------------------------------------
+----------------------------------------------------------
 
 ld r0, E
 ld r1, F
